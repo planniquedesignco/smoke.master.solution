@@ -1,4 +1,23 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-DOMAIN.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/automatic-smoke-curtain/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/fixed-smoke-curtain/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/smoke-ventilator-roof-wall/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/actuator/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/glass-baffles/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/products/customized-steel-structure-design/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/services/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/services/smoke-curtain-maintenance/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/services/professional-engineer-calculation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/projects/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/projects/avenue-k-mall/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/projects/kl-gateway-mall/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/projects/melawati-mall/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/projects/damen-usj-mall/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/projects/aeon-mall-kulai-jaya/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/downloads/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://YOUR-DOMAIN.com/contact/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
