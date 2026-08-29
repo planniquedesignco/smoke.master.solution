@@ -1,0 +1,12 @@
+SMOKE MASTER SOLUTION - STANDALONE LOCAL PREVIEW BUILD
+
+This build embeds the website CSS, JavaScript, logo and local website images directly inside EVERY HTML page.
+
+You can double-click any index.html file after extracting the ZIP and the full design should render.
+
+Examples:
+- index.html
+- products/automatic-smoke-curtain/index.html
+- projects/aeon-mall-kulai-jaya/index.html
+
+GitHub Pages still uses the same folder structure and clean routes.
