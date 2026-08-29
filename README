@@ -1,0 +1,47 @@
+# Smoke Master Solution — GitHub Multi-Page Build
+
+This folder is the split static version of the supplied single-file website. The visual CSS, loader, header, footer, WhatsApp enquiry drawer, mobile navigation and content styling are shared across every route.
+
+## Routes
+
+- `/`
+- `about/`
+- `products/`
+- `products/automatic-smoke-curtain/`
+- `products/fixed-smoke-curtain/`
+- `products/smoke-ventilator-roof-wall/`
+- `products/actuator/`
+- `products/glass-baffles/`
+- `products/customized-steel-structure-design/`
+- `services/`
+- `services/smoke-curtain-maintenance/`
+- `services/professional-engineer-calculation/`
+- `projects/`
+- `projects/avenue-k-mall/`
+- `projects/kl-gateway-mall/`
+- `projects/melawati-mall/`
+- `projects/damen-usj-mall/`
+- `projects/aeon-mall-kulai-jaya/`
+- `downloads/`
+- `contact/`
+
+## GitHub upload
+
+Upload the contents of this folder to the repository root. GitHub Pages will serve each directory `index.html` as a clean path, for example `/products/automatic-smoke-curtain/`.
+
+## SEO before production
+
+Each HTML already has its own title, description, keywords, robots directives, Open Graph/Twitter metadata, canonical tag, and JSON-LD. The canonical tag uses `./`, so it resolves correctly on both GitHub Pages and a future custom domain.
+
+Before submitting the sitemap to Google Search Console, replace `https://YOUR-DOMAIN.com` in `sitemap.xml` and `robots.txt` with the final production domain.
+
+## Company profile PDF
+
+The Downloads page still references `Smoke-Master-Solution-Company-Profile.pdf`, matching the supplied source. Put that PDF in the `/downloads/` folder, or update the href if you want it stored elsewhere.
+
+
+## Local preview before GitHub
+
+**Extract the entire ZIP first. Do not open an HTML file from inside the ZIP.** Opening an HTML file directly from a compressed archive can cause the browser to receive only that HTML file, so the shared CSS, JavaScript and images cannot be found. The result looks like plain browser-default HTML with broken images.
+
+After extracting the complete `smoke-master-github` folder, open `index.html`. You may also open any nested `index.html` directly. Local `file://` navigation automatically appends `index.html`; GitHub Pages keeps the clean folder URLs.
