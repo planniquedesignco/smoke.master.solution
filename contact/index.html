@@ -1398,7 +1398,7 @@ Selangor Darul Ehsan
 <script>
 const SMS_ROOT='/';
  function resolveAsset(x){return /^(data:|https?:)/i.test(x)?x:SMS_ROOT+x;}
-const ROUTES={home:'',about:'about/',products:'products/',services:'services/',projects:'projects/',downloads:'downloads/',contact:'contact/'};
+const ROUTES={home:'',about:'about/',products:'products/',services:'services/',projects:'projects/',downloads:'download/',contact:'contact/'};
 const PRODUCT_ROUTES={"automatic": "products/automatic-smoke-curtain/", "fixed": "products/fixed-smoke-curtain/", "ventilator": "products/smoke-ventilator-roof-wall/", "actuator": "products/actuator/", "glass": "products/glass-baffles/", "steel": "products/customized-steel-structure-design/"};
 const SERVICE_ROUTES={"maintenance": "services/smoke-curtain-maintenance/", "pe": "services/professional-engineer-calculation/"};
 const PROJECT_ROUTES={"avenue": "projects/avenue-k-mall/", "gateway": "projects/kl-gateway-mall/", "melawati": "projects/melawati-mall/", "damen": "projects/damen-usj-mall/", "aeon": "projects/aeon-mall-kulai-jaya/"};
@@ -1417,7 +1417,7 @@ function openPage(name){ go(ROUTES[name]??''); }
 function showProductLobby(){go('products/')}
 function showServiceLobby(){go('services/')}
 function showProjectLobby(){go('projects/')}
-function goDownloads(){go('downloads/')}
+function goDownloads(){go('download/')}
 function openProductPage(key){if(PRODUCT_ROUTES[key])go(PRODUCT_ROUTES[key])}
 function openServicePage(key){if(SERVICE_ROUTES[key])go(SERVICE_ROUTES[key])}
 function openProjectPage(key){if(PROJECT_ROUTES[key])go(PROJECT_ROUTES[key])}
