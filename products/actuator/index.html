@@ -1377,12 +1377,74 @@ footer .brand-copy{
     height:38px !important;
   }
 }
+
+/* ===== SmokeMaster new logo - balanced fit ===== */
+.site-header .brand{
+  min-width:138px!important;
+  flex:0 0 138px!important;
+  gap:0!important;
+}
+.site-header .brand-logo{
+  width:118px!important;
+  height:62px!important;
+  flex:0 0 118px!important;
+  overflow:visible!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+}
+.site-header .brand-logo img{
+  width:118px!important;
+  height:62px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  display:block!important;
+}
+.site-header .brand-copy{display:none!important;}
+
+footer .brand{
+  width:auto!important;
+  min-width:0!important;
+  gap:0!important;
+}
+footer .brand-logo{
+  width:148px!important;
+  height:88px!important;
+  flex:0 0 148px!important;
+  overflow:visible!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+}
+footer .brand-logo img{
+  width:148px!important;
+  height:88px!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  display:block!important;
+}
+footer .brand-copy{display:none!important;}
+
+@media(max-width:1000px){
+  .site-header .brand{min-width:122px!important;flex:0 1 122px!important;}
+  .site-header .brand-logo,
+  .site-header .brand-logo img{width:108px!important;height:56px!important;}
+  .site-header .brand-logo{flex-basis:108px!important;}
+}
+@media(max-width:700px){
+  .site-header .brand{min-width:108px!important;flex:0 1 108px!important;}
+  .site-header .brand-logo,
+  .site-header .brand-logo img{width:96px!important;height:52px!important;}
+  .site-header .brand-logo{flex-basis:96px!important;}
+  footer .brand-logo,footer .brand-logo img{width:132px!important;height:78px!important;}
+  footer .brand-logo{flex-basis:132px!important;}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"#organization","name":"Smoke Master Solution","description":"Smoke control specialist providing smoke curtain, smoke ventilation, actuator, glass baffle, customized steel structure design, maintenance and professional engineer calculation services in Malaysia.","email":"sales.smokemaster@gmail.com","telephone":"+60122702200","areaServed":{"@type":"Country","name":"Malaysia"},"address":{"@type":"PostalAddress","addressLocality":"Klang","addressRegion":"Selangor","addressCountry":"MY"},"knowsAbout":["Automatic Smoke Curtain","Fixed Smoke Curtain","Smoke Ventilation","Actuators","Glass Baffles","Smoke Barrier","Steel Structure Design","Smoke Curtain Maintenance","Professional Engineer Calculation"]},{"@type":"WebSite","@id":"#website","name":"Smoke Master Solution","publisher":{"@id":"#organization"},"inLanguage":"en-MY"},{"@type":"Product","name":"Actuator","description":"Electric actuator solutions used to operate compatible smoke ventilation and smoke-control components.","brand":{"@type":"Brand","name":"Smoke Master Solution"},"areaServed":"Malaysia"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://smokemastersolution.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://smokemastersolution.com/products/"},{"@type":"ListItem","position":3,"name":"Actuator","item":"https://smokemastersolution.com/products/actuator/"}]}]}</script>
 </head>
 <body data-section="products">
 <header class="site-header"><div class="container navbar">
- <button class="brand" onclick="openPage('home')"><div class="brand-logo"><img alt="Smoke Master icon" src="/assets/images/smokemaster-logo.png"/></div><div class="brand-copy"><strong>SMOKE MASTER SOLUTION</strong><span>Smoke Control Specialist</span></div></button>
+ <button class="brand" onclick="openPage('home')"><div class="brand-logo"><img alt="Smoke Master Solution logo" src="/assets/images/smokemaster-logo.png"/></div><div class="brand-copy"><strong>SMOKE MASTER SOLUTION</strong><span>Smoke Control Specialist</span></div></button>
 <ul class="navigation">
 <li class="nav-item"><button class="nav-btn" data-page-link="home" onclick="openPage('home')">Home</button></li>
 <li class="nav-item"><button class="nav-btn" data-page-link="about" onclick="openPage('about')">About Us</button></li>
@@ -1405,7 +1467,7 @@ footer .brand-copy{
 <button data-page-link="downloads" onclick="goDownloads()">Downloads</button>
 --><button onclick="openPage('contact')">Contact</button>
 </div>
-</div></header><main class="page active page-motion" id="page-products"><section class="lobby detail-view show" id="productDetailView"><div class="container"><button class="detail-back" onclick="showProductLobby()">← Back to All Products</button><div class="detail-hero"><div class="detail-hero-copy"><div class="kicker">Smoke Master Product</div><h2 id="productDetailTitle">Actuator</h2><p id="productDetailText">Actuator selection is coordinated around the relevant opening, load and control requirements for the project. Electric actuator solutions used to operate compatible smoke ventilation and smoke-control components.</p><div class="detail-points" id="productDetailPoints"><div>Electric operation</div><div>Smoke ventilation use</div><div>System integration</div><div>Project selection support</div></div><button class="btn" style="margin-top:24px;width:max-content" onclick="openDrawer('Actuator')">Enquire About Product <span class="arrow"></span></button></div><div class="detail-hero-media"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=95" alt="Actuator by Smoke Master Solution"></div></div></div></section></main><footer><div class="container"><div class="footer-grid"><div><button class="brand" onclick="openPage('home')"><div class="brand-logo"><img alt="Smoke Master icon" src="/assets/images/smokemaster-logo.png"/></div><div class="brand-copy"><strong>SMOKE MASTER SOLUTION</strong><span>Smoke Control Specialist</span></div></button><p class="footer-about">Smoke curtain, ventilation, actuator, glass baffle and engineering solutions for commercial and industrial projects in Malaysia.</p></div><div class="footer-col"><h4>Company</h4><button onclick="openPage('about')">About Us</button><button onclick="showProjectLobby()">Projects</button><button onclick="goDownloads()">Downloads</button><button onclick="openPage('contact')">Contact</button></div><div class="footer-col"><h4>Products &amp; Services</h4><button onclick="showProductLobby()">Products Lobby</button><button onclick="showServiceLobby()">Services Lobby</button></div><div class="footer-col"><h4>Get In Touch</h4><a href="tel:+60122702200">+60 12-270 2200</a><a href="mailto:sales.smokemaster@gmail.com">sales.smokemaster@gmail.com</a><a href="https://wa.me/60122702200" target="_blank">WhatsApp</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Smoke Master Solution. All Rights Reserved.</span><span>Smoke Control · Ventilation · Engineering</span></div></div></footer><a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/60122702200?text=Hi%20Smoke%20Master%20Solution,%20I%20would%20like%20to%20enquire%20about%20your%20products%20or%20services." target="_blank"><svg viewbox="0 0 32 32"><path d="M19.11 17.22c-.26-.13-1.52-.75-1.75-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.29-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.15s.92 2.49 1.05 2.66c.13.17 1.81 2.76 4.38 3.87.61.26 1.09.42 1.46.54.61.19 1.17.17 1.61.1.49-.07 1.52-.62 1.73-1.22.21-.6.21-1.12.15-1.22-.06-.11-.24-.17-.5-.3z"></path><path d="M16.01 3C8.83 3 3 8.71 3 15.75c0 2.25.6 4.45 1.73 6.38L3 28.5l6.58-1.68a13.12 13.12 0 006.42 1.66h.01c7.17 0 13-5.71 13-12.75C29.01 8.71 23.18 3 16.01 3zm0 23.33h-.01a10.9 10.9 0 01-5.56-1.51l-.4-.23-3.9 1 1.04-3.73-.26-.39a10.51 10.51 0 01-1.68-5.72c0-5.85 4.83-10.6 10.77-10.6 5.94 0 10.77 4.75 10.77 10.6 0 5.84-4.83 10.58-10.77 10.58z"></path></svg></a><div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div><aside class="drawer" id="drawer"><button class="drawer-close" onclick="closeDrawer()">×</button><h3>Tell us what you need.</h3><p>Complete the information below and your enquiry will open in WhatsApp.</p><form id="drawerForm"><label>Name</label><input id="drawerName" placeholder="Your Name" required=""/><label>Company</label><input id="drawerCompany" placeholder="Company Name"/><label>Product / Service</label><select id="drawerService"><option>Automatic Smoke Curtain</option><option>Fixed Smoke Curtain</option><option>Roof / Wall Ventilator</option><option>Actuator</option><option>Glass Baffles</option><option>Customized Steel Structure Design</option><option>Smoke Curtain Maintenance</option><option>Professional Engineer Calculation</option><option>General Consultation</option></select><label>Project Location</label><input id="drawerLocation" placeholder="Example: Kuala Lumpur"/><label>Project Stage</label><select id="drawerStage"><option>Planning Stage</option><option>Tender / Quotation Stage</option><option>Construction Stage</option><option>Existing Building</option><option>Maintenance Requirement</option></select><label>Requirements</label><textarea id="drawerMessage" placeholder="Tell us more about your project..."></textarea><button class="drawer-submit" type="submit">Send via WhatsApp</button></form></aside><div class="modal" id="modal"><div class="modal-box"><button class="modal-close" onclick="closeModal()">×</button><div class="modal-label">Project Case Study</div><h3 id="modalTitle"></h3><p class="modal-text" id="modalText"></p><div class="modal-grid" id="modalGrid"></div><div class="project-overview" id="projectOverview"></div><div class="project-gallery" id="projectGallery"></div><a class="modal-action" id="modalCTA" target="_blank">Discuss a Similar Project <span class="arrow"></span></a></div></div>
+</div></header><main class="page active page-motion" id="page-products"><section class="lobby detail-view show" id="productDetailView"><div class="container"><button class="detail-back" onclick="showProductLobby()">← Back to All Products</button><div class="detail-hero"><div class="detail-hero-copy"><div class="kicker">Smoke Master Product</div><h2 id="productDetailTitle">Actuator</h2><p id="productDetailText">Actuator selection is coordinated around the relevant opening, load and control requirements for the project. Electric actuator solutions used to operate compatible smoke ventilation and smoke-control components.</p><div class="detail-points" id="productDetailPoints"><div>Electric operation</div><div>Smoke ventilation use</div><div>System integration</div><div>Project selection support</div></div><button class="btn" style="margin-top:24px;width:max-content" onclick="openDrawer('Actuator')">Enquire About Product <span class="arrow"></span></button></div><div class="detail-hero-media"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=95" alt="Actuator by Smoke Master Solution"></div></div></div></section></main><footer><div class="container"><div class="footer-grid"><div><button class="brand" onclick="openPage('home')"><div class="brand-logo"><img alt="Smoke Master Solution logo" src="/assets/images/smokemaster-logo.png"/></div><div class="brand-copy"><strong>SMOKE MASTER SOLUTION</strong><span>Smoke Control Specialist</span></div></button><p class="footer-about">Smoke curtain, ventilation, actuator, glass baffle and engineering solutions for commercial and industrial projects in Malaysia.</p></div><div class="footer-col"><h4>Company</h4><button onclick="openPage('about')">About Us</button><button onclick="showProjectLobby()">Projects</button><button onclick="goDownloads()">Downloads</button><button onclick="openPage('contact')">Contact</button></div><div class="footer-col"><h4>Products &amp; Services</h4><button onclick="showProductLobby()">Products Lobby</button><button onclick="showServiceLobby()">Services Lobby</button></div><div class="footer-col"><h4>Get In Touch</h4><a href="tel:+60122702200">+60 12-270 2200</a><a href="mailto:sales.smokemaster@gmail.com">sales.smokemaster@gmail.com</a><a href="https://wa.me/60122702200" target="_blank">WhatsApp</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Smoke Master Solution. All Rights Reserved.</span><span>Smoke Control · Ventilation · Engineering</span></div></div></footer><a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/60122702200?text=Hi%20Smoke%20Master%20Solution,%20I%20would%20like%20to%20enquire%20about%20your%20products%20or%20services." target="_blank"><svg viewbox="0 0 32 32"><path d="M19.11 17.22c-.26-.13-1.52-.75-1.75-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.29-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.58-1.4-.8-1.92-.21-.5-.43-.43-.58-.44h-.5c-.17 0-.45.06-.69.32-.24.26-.9.88-.9 2.15s.92 2.49 1.05 2.66c.13.17 1.81 2.76 4.38 3.87.61.26 1.09.42 1.46.54.61.19 1.17.17 1.61.1.49-.07 1.52-.62 1.73-1.22.21-.6.21-1.12.15-1.22-.06-.11-.24-.17-.5-.3z"></path><path d="M16.01 3C8.83 3 3 8.71 3 15.75c0 2.25.6 4.45 1.73 6.38L3 28.5l6.58-1.68a13.12 13.12 0 006.42 1.66h.01c7.17 0 13-5.71 13-12.75C29.01 8.71 23.18 3 16.01 3zm0 23.33h-.01a10.9 10.9 0 01-5.56-1.51l-.4-.23-3.9 1 1.04-3.73-.26-.39a10.51 10.51 0 01-1.68-5.72c0-5.85 4.83-10.6 10.77-10.6 5.94 0 10.77 4.75 10.77 10.6 0 5.84-4.83 10.58-10.77 10.58z"></path></svg></a><div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div><aside class="drawer" id="drawer"><button class="drawer-close" onclick="closeDrawer()">×</button><h3>Tell us what you need.</h3><p>Complete the information below and your enquiry will open in WhatsApp.</p><form id="drawerForm"><label>Name</label><input id="drawerName" placeholder="Your Name" required=""/><label>Company</label><input id="drawerCompany" placeholder="Company Name"/><label>Product / Service</label><select id="drawerService"><option>Automatic Smoke Curtain</option><option>Fixed Smoke Curtain</option><option>Roof / Wall Ventilator</option><option>Actuator</option><option>Glass Baffles</option><option>Customized Steel Structure Design</option><option>Smoke Curtain Maintenance</option><option>Professional Engineer Calculation</option><option>General Consultation</option></select><label>Project Location</label><input id="drawerLocation" placeholder="Example: Kuala Lumpur"/><label>Project Stage</label><select id="drawerStage"><option>Planning Stage</option><option>Tender / Quotation Stage</option><option>Construction Stage</option><option>Existing Building</option><option>Maintenance Requirement</option></select><label>Requirements</label><textarea id="drawerMessage" placeholder="Tell us more about your project..."></textarea><button class="drawer-submit" type="submit">Send via WhatsApp</button></form></aside><div class="modal" id="modal"><div class="modal-box"><button class="modal-close" onclick="closeModal()">×</button><div class="modal-label">Project Case Study</div><h3 id="modalTitle"></h3><p class="modal-text" id="modalText"></p><div class="modal-grid" id="modalGrid"></div><div class="project-overview" id="projectOverview"></div><div class="project-gallery" id="projectGallery"></div><a class="modal-action" id="modalCTA" target="_blank">Discuss a Similar Project <span class="arrow"></span></a></div></div>
 <script>
 const SMS_ROOT='/';
  function resolveAsset(x){return /^(data:|https?:)/i.test(x)?x:SMS_ROOT+x;}
