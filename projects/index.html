@@ -1492,14 +1492,43 @@ footer .brand-copy{display:none !important;}
   text-align:right;
 }
 
-/* client / development logo wall */
-.project-logo-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
+/* client / development logo wall - seamless two-row marquee */
+.project-logo-marquee{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  padding:2px 0;
+  -webkit-mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%);
+  mask-image:linear-gradient(to right,transparent 0,#000 2.5%,#000 97.5%,transparent 100%);
+}
+.project-logo-row{
+  overflow:hidden;
+  width:100%;
+}
+.project-logo-row + .project-logo-row{
+  margin-top:12px;
+}
+.project-logo-track{
+  display:flex;
+  width:max-content;
+  gap:12px;
+  will-change:transform;
+}
+.project-logo-row-left .project-logo-track{
+  animation:projectLogoMoveLeft 34s linear infinite;
+}
+.project-logo-row-right .project-logo-track{
+  animation:projectLogoMoveRight 36s linear infinite;
+}
+.project-logo-group{
+  display:flex;
+  flex:none;
   gap:12px;
 }
 .project-logo-item{
+  width:318px;
   height:165px;
+  flex:0 0 318px;
   padding:24px;
   display:flex;
   align-items:center;
@@ -1507,12 +1536,11 @@ footer .brand-copy{display:none !important;}
   border:1px solid #e5e5e2;
   background:#fafaf9;
   overflow:hidden;
-  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  transition:background .25s ease,box-shadow .25s ease;
 }
 .project-logo-item:hover{
-  transform:translateY(-2px);
   background:#fff;
-  box-shadow:0 14px 35px rgba(20,22,24,.07);
+  box-shadow:0 12px 30px rgba(20,22,24,.06);
 }
 .project-logo-item img{
   width:auto;
@@ -1520,6 +1548,14 @@ footer .brand-copy{display:none !important;}
   max-width:88%;
   max-height:105px;
   object-fit:contain;
+}
+@keyframes projectLogoMoveLeft{
+  from{transform:translateX(0);}
+  to{transform:translateX(calc(-50% - 6px));}
+}
+@keyframes projectLogoMoveRight{
+  from{transform:translateX(calc(-50% - 6px));}
+  to{transform:translateX(0);}
 }
 
 /* project photo gallery */
@@ -1596,8 +1632,11 @@ footer .brand-copy{display:none !important;}
 
 @media(max-width:1000px){
   .project-reference-hero{padding:50px 0 34px;}
-  .project-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-  .project-logo-item{height:150px;}
+  .project-logo-item{
+    width:260px;
+    flex-basis:260px;
+    height:145px;
+  }
   .simple-project-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
   .simple-project-card{height:290px;}
 }
@@ -1630,17 +1669,34 @@ footer .brand-copy{display:none !important;}
     text-align:left;
     font-size:12px;
   }
-  .project-logo-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
+  .project-logo-marquee{
+    width:calc(100% + 32px);
+    margin-left:-16px;
+    -webkit-mask-image:linear-gradient(to right,transparent 0,#000 5%,#000 95%,transparent 100%);
+    mask-image:linear-gradient(to right,transparent 0,#000 5%,#000 95%,transparent 100%);
+  }
+  .project-logo-row + .project-logo-row{
+    margin-top:8px;
+  }
+  .project-logo-track,
+  .project-logo-group{
     gap:8px;
   }
   .project-logo-item{
-    height:120px;
-    padding:15px;
+    width:190px;
+    flex-basis:190px;
+    height:112px;
+    padding:14px;
   }
   .project-logo-item img{
     max-width:92%;
-    max-height:78px;
+    max-height:74px;
+  }
+  .project-logo-row-left .project-logo-track{
+    animation-duration:28s;
+  }
+  .project-logo-row-right .project-logo-track{
+    animation-duration:30s;
   }
   .project-gallery-title{
     margin-top:40px;
@@ -1665,6 +1721,35 @@ footer .brand-copy{display:none !important;}
   }
   .simple-project-location{
     font-size:10px;
+  }
+}
+
+
+@media(prefers-reduced-motion:reduce){
+  .project-logo-track{
+    animation:none !important;
+    transform:none !important;
+  }
+  .project-logo-row{
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .project-logo-row::-webkit-scrollbar{display:none;}
+}
+
+
+/* ===== V25 COMPLETED PROJECTS - SOFTER CORNERS ===== */
+.simple-project-card{
+  border-radius:14px !important;
+  overflow:hidden !important;
+}
+.simple-project-card img{
+  border-radius:14px !important;
+}
+@media(max-width:700px){
+  .simple-project-card,
+  .simple-project-card img{
+    border-radius:12px !important;
   }
 }
 
@@ -1713,8 +1798,11 @@ footer .brand-copy{display:none !important;}
       <div class="project-reference-heading reveal-up">
       </div>
 
-      <div class="project-logo-grid reveal-up">
-        <div class="project-logo-item">
+      <div class="project-logo-marquee reveal-up" aria-label="Selected project references">
+  <div class="project-logo-row project-logo-row-left">
+    <div class="project-logo-track">
+      <div class="project-logo-group">
+<div class="project-logo-item">
   <img src="/assets/images/projects/project-logo-four-seasons.jpg" alt="Four Seasons Place Kuala Lumpur" loading="lazy" decoding="async">
 </div>
 <div class="project-logo-item">
@@ -1726,6 +1814,27 @@ footer .brand-copy{display:none !important;}
 <div class="project-logo-item">
   <img src="/assets/images/projects/project-logo-melawati.jpg" alt="Melawati Mall" loading="lazy" decoding="async">
 </div>
+      </div>
+      <div class="project-logo-group" aria-hidden="true">
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-four-seasons.jpg" alt="" loading="lazy" decoding="async">
+</div>
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-avenue-k.jpg" alt="" loading="lazy" decoding="async">
+</div>
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-kl-gateway.jpg" alt="" loading="lazy" decoding="async">
+</div>
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-melawati.jpg" alt="" loading="lazy" decoding="async">
+</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-logo-row project-logo-row-right">
+    <div class="project-logo-track">
+      <div class="project-logo-group">
 <div class="project-logo-item">
   <img src="/assets/images/projects/project-logo-damen.jpg" alt="Damen USJ" loading="lazy" decoding="async">
 </div>
@@ -1739,6 +1848,23 @@ footer .brand-copy{display:none !important;}
   <img src="/assets/images/projects/project-logo-ioi-damansara.jpg" alt="IOI Mall Damansara" loading="lazy" decoding="async">
 </div>
       </div>
+      <div class="project-logo-group" aria-hidden="true">
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-damen.jpg" alt="" loading="lazy" decoding="async">
+</div>
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-aeon.jpg" alt="" loading="lazy" decoding="async">
+</div>
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-perodua.jpg" alt="" loading="lazy" decoding="async">
+</div>
+<div class="project-logo-item" aria-hidden="true">
+  <img src="/assets/images/projects/project-logo-ioi-damansara.jpg" alt="" loading="lazy" decoding="async">
+</div>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div class="project-reference-heading project-gallery-title reveal-up">
         <h2>Completed Projects</h2>
