@@ -1572,6 +1572,43 @@ footer .brand-copy{display:none !important;}
   #page-home .split-image{aspect-ratio:1.5 / 1 !important;min-height:0 !important;}
 }
 
+
+/* ===== V28 FIXED HERO IMAGE FRAME - PREVENT LAYOUT SHIFT ===== */
+#page-home .home-hero{align-items:stretch !important;}
+#page-home .hero-image{
+  position:relative !important;
+  height:650px !important;
+  min-height:650px !important;
+  max-height:650px !important;
+  overflow:hidden !important;
+  background:#f2f2f0 !important;
+}
+#page-home .hero-image img,
+#page-home #heroRotator{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  display:block !important;
+}
+@media(max-width:1000px){
+  #page-home .hero-image{
+    height:430px !important;
+    min-height:430px !important;
+    max-height:430px !important;
+  }
+}
+@media(max-width:700px){
+  #page-home .hero-image{
+    height:340px !important;
+    min-height:340px !important;
+    max-height:340px !important;
+  }
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"#organization","name":"SMOKEMASTER Solution","description":"Smoke control specialist providing smoke curtain, smoke ventilation, actuator, glass baffle, customized steel structure design, maintenance and professional engineer calculation services in Malaysia.","email":"sales.smokemaster@gmail.com","telephone":"+60122702200","areaServed":{"@type":"Country","name":"Malaysia"},"address":{"@type":"PostalAddress","addressLocality":"Klang","addressRegion":"Selangor","addressCountry":"MY"},"knowsAbout":["Automatic Smoke Curtain","Fixed Smoke Curtain","Smoke Ventilation","Actuators","Glass Baffles","Smoke Barrier","Steel Structure Design","Smoke Curtain Maintenance","Professional Engineer Calculation"]},{"@type":"WebSite","@id":"#website","name":"SMOKEMASTER Solution","publisher":{"@id":"#organization"},"inLanguage":"en-MY"},{"@type":"WebPage","name":"SMOKEMASTER Solution","description":"Smoke control specialist in Malaysia."}]}</script>
 </head>
