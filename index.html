@@ -1611,6 +1611,130 @@ footer .brand-copy{display:none !important;}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"#organization","name":"SMOKEMASTER Solution","description":"Smoke control specialist providing smoke curtain, smoke ventilation, actuator, glass baffle, customized steel structure design, maintenance and professional engineer calculation services in Malaysia.","email":"sales.smokemaster@gmail.com","telephone":"+60122702200","areaServed":{"@type":"Country","name":"Malaysia"},"address":{"@type":"PostalAddress","addressLocality":"Klang","addressRegion":"Selangor","addressCountry":"MY"},"knowsAbout":["Automatic Smoke Curtain","Fixed Smoke Curtain","Smoke Ventilation","Actuators","Glass Baffles","Smoke Barrier","Steel Structure Design","Smoke Curtain Maintenance","Professional Engineer Calculation"]},{"@type":"WebSite","@id":"#website","name":"SMOKEMASTER Solution","publisher":{"@id":"#organization"},"inLanguage":"en-MY"},{"@type":"WebPage","name":"SMOKEMASTER Solution","description":"Smoke control specialist in Malaysia."}]}</script>
+
+<style id="consultation-fullscreen-fix">
+/* ===== TRUE FULL-SCREEN CONSULTATION FORM ===== */
+.drawer-overlay{
+  position:fixed !important;
+  inset:0 !important;
+  z-index:999998 !important;
+  background:rgba(20,22,24,.72) !important;
+}
+
+.drawer{
+  position:fixed !important;
+  inset:0 !important;
+  top:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  left:0 !important;
+  z-index:999999 !important;
+  width:100vw !important;
+  max-width:none !important;
+  height:100vh !important;
+  height:100dvh !important;
+  max-height:none !important;
+  margin:0 !important;
+  padding:clamp(24px,4vw,52px) !important;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  background:#fff !important;
+  transform:translateY(100%) !important;
+  transition:transform .32s ease !important;
+  box-sizing:border-box !important;
+  overscroll-behavior:contain;
+  -webkit-overflow-scrolling:touch;
+}
+
+.drawer.show{
+  transform:translateY(0) !important;
+}
+
+.drawer-close{
+  position:fixed !important;
+  top:clamp(18px,3vw,30px) !important;
+  right:clamp(18px,3vw,30px) !important;
+  z-index:1000000 !important;
+  float:none !important;
+  width:44px !important;
+  height:44px !important;
+  background:#f5f5f3 !important;
+}
+
+.drawer > h3,
+.drawer > p,
+.drawer > form{
+  width:min(720px,100%) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+.drawer > h3{
+  padding-top:42px !important;
+  font-size:clamp(34px,5vw,58px) !important;
+  line-height:1.05 !important;
+}
+
+.drawer > p{
+  margin-top:14px !important;
+  font-size:14px !important;
+}
+
+.drawer > form{
+  margin-top:30px !important;
+  padding-bottom:40px !important;
+}
+
+.drawer label{
+  margin-top:16px !important;
+  font-size:10px !important;
+}
+
+.drawer input,
+.drawer select,
+.drawer textarea{
+  min-height:54px !important;
+  font-size:14px !important;
+  padding:15px 16px !important;
+}
+
+.drawer textarea{
+  min-height:130px !important;
+}
+
+.drawer-submit{
+  min-height:56px !important;
+  margin-top:18px !important;
+}
+
+body.locked{
+  overflow:hidden !important;
+  height:100% !important;
+}
+
+@media(max-width:700px){
+  .drawer{
+    padding:18px 18px max(28px,env(safe-area-inset-bottom)) !important;
+  }
+  .drawer-close{
+    top:14px !important;
+    right:14px !important;
+    width:42px !important;
+    height:42px !important;
+  }
+  .drawer > h3{
+    padding-top:54px !important;
+    font-size:38px !important;
+  }
+  .drawer > p{
+    font-size:14px !important;
+  }
+  .drawer > form{
+    margin-top:24px !important;
+  }
+}
+</style>
+
 </head>
 <body class="locked preloading" data-section="home">
 <div class="preloader" id="preloader"><div class="loader"><div class="loader-logo"><img alt="SMOKEMASTER Solution logo" src="/assets/images/smokemaster-logo.png" loading="eager" decoding="async"/></div><div class="loader-tag">Smoke Curtain · Ventilator · Actuator</div><div class="loader-line"></div></div></div><header class="site-header"><div class="container navbar">
